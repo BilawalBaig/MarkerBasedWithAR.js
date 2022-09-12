@@ -23,6 +23,17 @@
                     }.bind(this));
                 },
             });
+
+            function switchScene(isModel) {
+                print(isModel);
+                if(isModel) {
+                    document.getElementById('scene_model').setAttribute('visible', 'true');
+                    document.getElementById('scene_video').setAttribute('visible', 'false');
+                } else {
+                    document.getElementById('scene_model').setAttribute('visible', 'false');
+                    document.getElementById('scene_video').setAttribute('visible', 'true');
+                }                
+            }
         </script>
     </head>
 
@@ -116,5 +127,7 @@
 
         <a-entity camera></a-entity>
 
+        <a-image id="playbutton_1" position="0 0 0" width="10" height="10"></a-image>
+        <a-image id="playbutton_2" position="0 0 0" width="10" height="10"></a-image>
     </body>
 </html>
